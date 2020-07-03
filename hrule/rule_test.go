@@ -39,6 +39,6 @@ func TestStringRule(t *testing.T) {
 			S string `hrule:"isip"`
 		}
 		MyStructRule := MustCompile(&MyStruct{})
-		So(MyStructRule.Evaluate(&MyStruct{S: "114.243.208.244"}), ShouldBeTrue)
+		So(MyStructRule.Evaluate(&MyStruct{S: "114.243.208.244"}), ShouldBeNil)
 	})
 }
